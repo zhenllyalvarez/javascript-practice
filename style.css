@@ -12,7 +12,14 @@
 }
 
 .table {
-    justify-content: start;
-    align-items: start;
-    margin-left: -170px;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin-top: 20px;
+}
+
+table tr td {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
 }

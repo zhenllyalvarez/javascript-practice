@@ -29,7 +29,7 @@ function storeData() {
             const htmlTable = `
             <table>
                 <tr>
-                    <td>${todo}</td>
+                    <td>${todo}<button>Delete</button></td>
                 </tr>
             </table>`;
             alldata += htmlTable;
