@@ -18,7 +18,7 @@
 //     console.log(arrData);
 //     allData.innerHTML = arrData;
 // }
-const arrData = [];
+const arrData = JSON.parse(localStorage.getItem('todos')) || [];
 storeData();
 
 function storeData() {
@@ -31,6 +31,7 @@ function storeData() {
         }
     
     document.querySelector('.table').innerHTML = alldata;
+    localStorage.setItem('todos', JSON.stringify(arrData));
 }
 
 
