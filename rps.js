@@ -26,7 +26,12 @@ function storeData() {
 
         for(let i = 0; i < arrData.length; i++) {
             const todo = arrData[i];
-            const htmlTable = `<p>${todo}</p>`;
+            const htmlTable = `
+            <table>
+                <tr>
+                    <td>${todo}</td>
+                </tr>
+            </table>`;
             alldata += htmlTable;
         }
     
