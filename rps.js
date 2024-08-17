@@ -19,6 +19,7 @@
 //     allData.innerHTML = arrData;
 // }
 const arrData = JSON.parse(localStorage.getItem('todos')) || [];
+console.log(arrData);
 storeData();
 
 function storeData() {
@@ -29,7 +30,7 @@ function storeData() {
             const htmlTable = `
             <table>
                 <tr>
-                    <td>${todo}<button class="button" onclick="arrData.splice(${i}, 1); storeData();">Delete</button></td>
+                    <td>${todo}<button class="button" onclick="removeData(${i}); storeData();">Delete</button></td>
                 </tr>
             </table>`;
             alldata += htmlTable;
@@ -55,5 +56,10 @@ function addTodo() {
     }
 
 
+    storeData();
+}
+
+function removeData(index) {
+    arrData.splice(index, 1);
     storeData();
 }
