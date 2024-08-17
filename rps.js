@@ -29,7 +29,7 @@ function storeData() {
             const htmlTable = `
             <table>
                 <tr>
-                    <td>${todo}<button>Delete</button></td>
+                    <td>${todo}<button class="button" onclick="arrData.splice(${i}, 1); storeData();">Delete</button></td>
                 </tr>
             </table>`;
             alldata += htmlTable;
